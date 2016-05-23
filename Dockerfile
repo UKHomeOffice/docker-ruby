@@ -27,6 +27,6 @@ RUN groupadd -r app && \
 ENV GEM_PATH=/usr/local/rvm/gems/ruby-${RUBY_VERSION}:/usr/local/rvm/gems/ruby-${RUBY_VERSION}@global \
     RUBY_VERSION=ruby-${RUBY_VERSION} \
     GEM_HOME=/usr/local/rvm/gems/ruby-${RUBY_VERSION} \
-    PATH=${PATH}:/usr/local/rvm/rubies/ruby-${RUBY_VERSION}/bin
+    PATH=${PATH}:/usr/local/rvm/rubies/ruby-${RUBY_VERSION}/bin:/usr/local/rvm/gems/ruby-${RUBY_VERSION}/bin:/usr/local/rvm/gems/ruby-${RUBY_VERSION}@global/bin
 
 WORKDIR /app
