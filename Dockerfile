@@ -25,7 +25,7 @@ RUN \
     gpg --verify ruby-install-0.6.0.tar.gz.asc ruby-install-0.6.0.tar.gz && \
     tar -xzvf ruby-install-0.6.0.tar.gz && cd ruby-install-0.6.0 && make install && \
 #    Install Ruby
-    ruby-install --system ruby 2.2.6 && gem install bundler
+    ruby-install --system ruby $RUBY_VERSION && gem install bundler
 
 #Create app user and group
 RUN groupadd -r app && \
