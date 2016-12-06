@@ -6,7 +6,14 @@ This is a base container for projects that require ruby.
 
 ## Usage  
 
-Put `FROM quay.io/ukhomeofficedigital/ruby` in the top of your Dockerfile
+Example:
+```
+FROM quay.io/ukhomeofficedigital/ruby
+USER app
+``` 
+
+This is an onbuild image and will automatically install copy your app to /app and install it's dependencies with bundler, 
+as well as updating OS packages. It has a pre-setup user called app to ensure your app doesn't run as root.
 
 ### Useful Directories
 
@@ -29,6 +36,7 @@ We use [SemVer](http://semver.org/) for the version tags available See the tags 
 ## Authors
 
 * **Jay Keshur** - *Initial work* - [jaykeshur](https://github.com/jaykeshur)
+* **Tim Gent** - *Updates* - [timgent](https://github.com/timgent)
 
 See also the list of
 [contributors](https://github.com/UKHomeOffice/docker-ruby/graphs/contributors) who participated
